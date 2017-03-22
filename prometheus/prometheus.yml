@@ -64,3 +64,11 @@ scrape_configs:
     
 #     static_configs:
 #          - targets: ['node-exporter:9100']
+
+    metrics_path: '/prometheus'
+    # scheme defaults to 'http'.
+
+  - job_name: 'node-exporter'
+
+    static_configs:
+      - targets: ['192.168.99.1:8080','192.168.99.1:8081','192.168.99.1:8082','192.168.99.1:8083','192.168.99.1:8084','192.168.99.1:8085','192.168.99.1:8086']
