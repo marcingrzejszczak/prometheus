@@ -34,14 +34,21 @@ scrape_configs:
     scrape_interval: 5s
 
     static_configs:
+<<<<<<< HEAD
          - targets: ['localhost:9090']
 
 
   - job_name: 'cadvisor'
+=======
+         - targets: ['localhost:9090','cadvisor:8080','node-exporter:9100']
+
+  - job_name: 'demo-app'
+>>>>>>> DEMO
 
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 5s
 
+<<<<<<< HEAD
     dns_sd_configs:
     - names:
       - 'tasks.cadvisor'
@@ -64,3 +71,10 @@ scrape_configs:
     
 #     static_configs:
 #          - targets: ['node-exporter:9100']
+=======
+    metrics_path: '/prometheus'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ['192.168.99.1:8081', 'github-analytics.local.pcfdev.io']
+>>>>>>> DEMO
