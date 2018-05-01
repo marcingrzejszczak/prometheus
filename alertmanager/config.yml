@@ -7,3 +7,4 @@ receivers:
           - send_resolved: true
             username: 'grumpy'
             channel: '#alerts'
+            #api_url: https://hooks.slack.com/services/...
